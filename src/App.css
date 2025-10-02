@@ -1,3 +1,42 @@
+/* Responsive Design for Neumorphism Portfolio */
+@media (max-width: 900px) {
+  #root {
+    padding: 1rem;
+  }
+  .card, .neumorphic-card {
+    padding: 1.2em;
+    max-width: 98vw;
+  }
+  .cv-download-link button,
+  .contact-form button {
+    padding: 0.7rem 1.2rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  #root {
+    padding: 0.5rem;
+  }
+  .navbar ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+  }
+  .card, .neumorphic-card {
+    padding: 0.7em;
+    font-size: 0.98em;
+    max-width: 100vw;
+  }
+  .cv-download-link button,
+  .contact-form button {
+    padding: 0.5rem 0.7rem;
+    font-size: 0.98rem;
+  }
+  h1, h2 {
+    font-size: 1.5rem !important;
+  }
+}
 .cv-download-link button {
   background: #fff !important;
   color: #222 !important;
@@ -17,6 +56,12 @@
   color: #0056b3 !important;
   border-color: #b3d1ff !important;
   box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+/* Responsive Design for Neumorphism Portfolio */
+@media (max-width: 900px) {
+  #root {
+    padding: 1rem;
+  }
+}
 }
 #root {
   max-width: 1280px;
@@ -27,11 +72,18 @@
 
 .resume-page {
   text-align: center;
+@media (max-width: 600px) {
+  #root {
+    padding: 0.5rem;
+  }
+}
 .cv-download-link button,
 .contact-form button {
-  background: #f5f6fa;
-  color: #1565c0;
-  border: none;
+  background: #e0e3ec;
+  box-shadow: 0 2px 12px #e0e3ec;
+  padding: 1rem 2rem;
+  border-radius: 16px;
+  margin-bottom: 2rem;
   border-radius: 12px;
   box-shadow: 4px 4px 12px #e0e3ec, -4px -4px 12px #ffffff;
   padding: 0.85rem 2rem;
@@ -56,13 +108,13 @@
   padding: 2rem;
   text-align: center;
 }
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
+  background: #f7f8fa;
+  border-radius: 18px;
+  box-shadow: 8px 8px 24px #e0e3ec, -8px -8px 24px #ffffff;
+  padding: 2em;
+  transition: box-shadow 0.2s;
+  color: #222;
+  font-family: 'Inter', 'Nunito Sans', Arial, sans-serif;
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
@@ -71,25 +123,26 @@
 }
 
 @keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+  background: linear-gradient(90deg, #e0e3ec 0%, #b8aeea 100%);
+  color: #6c8ae4;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 4px 4px 12px #e0e3ec, -4px -4px 12px #ffffff;
+  padding: 0.85rem 2rem;
+  font-size: 1.08rem;
+  cursor: pointer;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  outline: none;
+  font-family: 'Nunito Sans', 'Inter', Arial, sans-serif;
+  transition: box-shadow 0.2s, background 0.2s, color 0.2s;
 }
 
 .card {
   padding: 2em;
-.card {
-  background: #f5f6fa;
-  border-radius: 18px;
+  box-shadow: 2px 2px 8px #b8aeea, -2px -2px 8px #ffffff;
+  background: linear-gradient(90deg, #b8aeea 0%, #e0e3ec 100%);
+  color: #222;
   box-shadow: 8px 8px 24px #e0e3ec, -8px -8px 24px #ffffff;
   padding: 2em;
   transition: box-shadow 0.2s;
@@ -99,5 +152,6 @@
 }
 
 .read-the-docs {
-  color: #888;
-}
+  color: #6c8ae4;
+  font-family: 'Inter', 'Nunito Sans', Arial, sans-serif;
+  font-weight: 800;
