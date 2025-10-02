@@ -18,9 +18,9 @@ export default function Home() {
   const cardStyle = {
     maxWidth: 700,
     margin: '2rem auto',
-    background: '#f8fbff',
+    background: '#fff',
     borderRadius: 16,
-    boxShadow: '0 4px 24px rgba(21,101,192,0.07)',
+    boxShadow: 'none',
     padding: '2.5rem 2rem',
   };
   const headingStyle = {
@@ -31,7 +31,7 @@ export default function Home() {
   };
   const sectionStyle = {
     marginBottom: '2rem',
-    background: '#e3f0ff',
+    background: '#fff',
     borderRadius: 10,
     padding: '1.2rem',
   };
@@ -44,7 +44,7 @@ export default function Home() {
           Mathematics & Computer Science professional passionate about IT, Finance, and Data Analytics. Dedicated to leveraging analytical skills and technical expertise to drive innovative solutions and support data-driven decision-making.
         </p>
       </div>
-      <div style={{ ...sectionStyle, background: '#eaf6ff' }}>
+      <div style={sectionStyle}>
         <p style={{ margin: 0 }}>
           Explore my background, skills, and experience across IT, analytics, and leadership. Welcome to my modern portfolio!
         </p>
