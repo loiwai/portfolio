@@ -3,24 +3,27 @@
   <head>
     <meta charset="utf-8">
     <title>404 - Redirecting...</title>
-    <meta http-equiv="refresh" content="0; url=./index.html">
     <script>
-      // For GitHub Pages SPA routing
-      var redirectTo = '/portfolio/index.html';
+      // GitHub Pages SPA redirect: preserve route as hash
+      var path = window.location.pathname;
+      var repo = '';
       if (window.location.hostname.endsWith('github.io')) {
-        var path = window.location.pathname.split('/');
-        if (path.length > 2) {
-          redirectTo = '/' + path[1] + '/index.html';
+        var parts = path.split('/');
+        if (parts.length > 2) {
+          repo = '/' + parts[1];
         }
       }
-      window.location.replace(redirectTo + window.location.search + window.location.hash);
+      var route = path.replace(repo + '/404.html', '');
+      var redirectTo = repo + '/index.html' + (route ? '#' + route : '');
+      redirectTo += window.location.search + window.location.hash;
+      window.location.replace(redirectTo);
     </script>
   </head>
   <body>
     <h1>404 - Redirecting...</h1>
-    <p>If you are not redirected, <a id="redirectLink" href="/portfolio/index.html">click here</a>.</p>
+    <p>If you are not redirected, <a id="redirectLink" href="#">click here</a>.</p>
     <script>
-      document.getElementById('redirectLink').href = redirectTo + window.location.search + window.location.hash;
+      document.getElementById('redirectLink').href = redirectTo;
     </script>
   </body>
 </html>
