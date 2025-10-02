@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>404 - Redirecting...</title>
+    <script>
+      // GitHub Pages SPA redirect: preserve route as hash
+      var path = window.location.pathname;
+      var repo = '';
+      if (window.location.hostname.endsWith('github.io')) {
+        var parts = path.split('/');
+        if (parts.length > 2) {
+          repo = '/' + parts[1];
+        }
+      }
+      var route = path.replace(repo + '/404.html', '');
+      var redirectTo = repo + '/index.html' + (route ? '#' + route : '');
+      redirectTo += window.location.search + window.location.hash;
+      window.location.replace(redirectTo);
+    </script>
+  </head>
+  <body>
+    <h1>404 - Redirecting...</h1>
+    <p>If you are not redirected, <a id="redirectLink" href="#">click here</a>.</p>
+    <script>
+      document.getElementById('redirectLink').href = redirectTo;
+    </script>
+  </body>
+</html>

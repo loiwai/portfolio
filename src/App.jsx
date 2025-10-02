@@ -1,8 +1,8 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
-import Projects from './pages/Projects';
+// Removed Projects import
 import Contact from './pages/Contact';
 
 function ScrollToTop() {
@@ -14,17 +14,14 @@ function ScrollToTop() {
 }
 
 export default function App() {
-  // Use /portfolio for GitHub Pages, blank for local preview
-  const isProd = window.location.hostname.endsWith('github.io');
-  const basename = isProd ? '/portfolio' : '';
   return (
-    <Router basename={basename}>
+    <Router>
       <ScrollToTop />
       <nav className="navbar">
         <ul>
           <li><Link to="/">Home</Link></li>
           <li><Link to="/about">About</Link></li>
-          <li><Link to="/projects">Projects</Link></li>
+          {/* Removed Projects link */}
           <li><Link to="/contact">Contact</Link></li>
         </ul>
       </nav>
@@ -33,7 +30,7 @@ export default function App() {
           <Route index element={<Home />} />
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/projects" element={<Projects />} />
+          {/* Removed Projects route */}
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<Home />} />
         </Routes>
