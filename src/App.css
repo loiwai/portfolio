@@ -27,35 +27,32 @@
 
 .resume-page {
   text-align: center;
-  margin-top: 2rem;
-}
-
-
 .cv-download-link button,
 .contact-form button {
-  background: linear-gradient(90deg, #f8fbff 0%, #e3f0ff 100%);
+  background: #f5f6fa;
   color: #1565c0;
-  border: 1.5px solid #cfe2ff;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 4px 4px 12px #e0e3ec, -4px -4px 12px #ffffff;
   padding: 0.85rem 2rem;
-  border-radius: 10px;
   font-size: 1.08rem;
   cursor: pointer;
   font-weight: 600;
   letter-spacing: 0.02em;
-  box-shadow: 0 2px 12px rgba(21,101,192,0.07);
-  transition: background 0.2s, color 0.2s, border 0.2s, box-shadow 0.2s;
   outline: none;
+  transition: box-shadow 0.2s, background 0.2s, color 0.2s;
 }
 .cv-download-link button:hover,
 .contact-form button:hover {
-  background: linear-gradient(90deg, #eaf6ff 0%, #d0e7ff 100%);
+  box-shadow: 2px 2px 8px #e0e3ec, -2px -2px 8px #ffffff;
+  background: #e9ecf4;
   color: #003366;
-  border-color: #90caf9;
-  box-shadow: 0 4px 20px rgba(21,101,192,0.12);
 }
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
+.cv-download-link button:active,
+.contact-form button:active {
+  box-shadow: inset 2px 2px 6px #e0e3ec, inset -2px -2px 6px #ffffff;
+  background: #e3e6ee;
+}
   padding: 2rem;
   text-align: center;
 }
@@ -90,6 +87,15 @@
 
 .card {
   padding: 2em;
+.card {
+  background: #f5f6fa;
+  border-radius: 18px;
+  box-shadow: 8px 8px 24px #e0e3ec, -8px -8px 24px #ffffff;
+  padding: 2em;
+  transition: box-shadow 0.2s;
+}
+.card:hover {
+  box-shadow: 4px 4px 16px #e0e3ec, -4px -4px 16px #ffffff;
 }
 
 .read-the-docs {

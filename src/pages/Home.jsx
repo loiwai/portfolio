@@ -1,4 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
+
+function NeumorphicToggle() {
+  const [active, setActive] = useState(false);
+  return (
+    <div
+      className={`neumorphic-toggle${active ? ' active' : ''}`}
+      onClick={() => setActive(!active)}
+      title={active ? 'On' : 'Off'}
+      style={{ margin: '2rem auto' }}
+    >
+      <div className="toggle-knob" />
+    </div>
+  );
+}
 
 export default function Home() {
   const cardStyle = {
@@ -35,6 +49,7 @@ export default function Home() {
           Explore my background, skills, and experience across IT, analytics, and leadership. Welcome to my modern portfolio!
         </p>
       </div>
+      <NeumorphicToggle />
     </div>
   );
 }
