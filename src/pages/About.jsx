@@ -9,12 +9,7 @@ export default function About() {
     boxShadow: '0 4px 24px rgba(21,101,192,0.07)',
     padding: '2.5rem 2rem',
   };
-  const sectionStyle = {
-    marginBottom: '2rem',
-    background: '#fff',
-    borderRadius: 10,
-    padding: '1.2rem',
-  };
+  // Removed sectionStyle, use plain <p> tags for inner content
   const headingStyle = {
     color: '#1565c0',
     fontWeight: 800,

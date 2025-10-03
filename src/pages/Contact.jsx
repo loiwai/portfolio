@@ -16,14 +16,7 @@ export default function Contact() {
     fontSize: '2.5rem',
     marginBottom: '1.5rem',
   };
-  const sectionStyle = {
-    marginBottom: '2rem',
-    background: 'none',
-    borderRadius: 0,
-    boxShadow: 'none',
-    padding: 0,
-    position: 'static',
-  };
+  // Removed sectionStyle, use plain <p> tags for inner content
   const buttonStyle = {
     minWidth: 220,
     background: '#e3f0ff',
