@@ -29,67 +29,55 @@ export default function Home() {
       <div className="fish-anim-bg" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 0, pointerEvents: 'none' }}>
         <svg width="100%" height="100%" viewBox="0 0 700 350" style={{ position: 'absolute', left: 0, top: 0 }}>
           <defs>
-            <path id="fishPath" d="M50,50 h600 a30,30 0 0 1 30,30 v190 a30,30 0 0 1 -30,30 h-600 a30,30 0 0 1 -30,-30 v-190 a30,30 0 0 1 30,-30 z" />
-            {/* Rainbow Fish */}
-            <g id="rainbowFish">
-              <ellipse cx="0" cy="0" rx="20" ry="12" fill="url(#rainbowGradient)" opacity="0.7" />
-              <polygon points="20,0 38,10 20,12" fill="#6a5acd" opacity="0.7" />
-              <circle cx="-10" cy="-4" r="2.5" fill="#fff" />
-              <circle cx="-10" cy="-4" r="1.2" fill="#222" />
-            </g>
             <linearGradient id="rainbowGradient" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stop-color="#ff5e62" />
-              <stop offset="30%" stop-color="#ffb347" />
-              <stop offset="60%" stop-color="#43e97b" />
-              <stop offset="100%" stop-color="#38f9d7" />
+              <stop offset="0%" stopColor="#ff5e62" />
+              <stop offset="30%" stopColor="#ffb347" />
+              <stop offset="60%" stopColor="#43e97b" />
+              <stop offset="100%" stopColor="#38f9d7" />
             </linearGradient>
-            {/* Neon Tetra */}
-            <g id="neonTetra">
-              <ellipse cx="0" cy="0" rx="16" ry="8" fill="#38f9d7" opacity="0.7" />
-              <rect x="-8" y="-2" width="16" height="4" fill="#ff5e62" opacity="0.7" />
-              <polygon points="16,0 26,6 16,8" fill="#1565c0" opacity="0.7" />
-              <circle cx="-7" cy="-2" r="1.5" fill="#fff" />
-              <circle cx="-7" cy="-2" r="0.8" fill="#222" />
-            </g>
-            {/* Goldfish */}
-            <g id="goldfish">
-              <ellipse cx="0" cy="0" rx="18" ry="10" fill="#ffb347" opacity="0.7" />
-              <polygon points="18,0 35,8 18,10" fill="#ff7f50" opacity="0.7" />
-              <circle cx="-8" cy="-3" r="2.5" fill="#fff" />
-              <circle cx="-8" cy="-3" r="1.2" fill="#222" />
-            </g>
-            {/* Guppy */}
-            <g id="guppy">
-              <ellipse cx="0" cy="0" rx="14" ry="7" fill="#43e97b" opacity="0.7" />
-              <polygon points="14,0 24,5 14,7" fill="#ff5e62" opacity="0.7" />
-              <circle cx="-6" cy="-2" r="1.8" fill="#fff" />
-              <circle cx="-6" cy="-2" r="0.9" fill="#222" />
-            </g>
+            <path id="fishPath" d="M50,50 h600 a30,30 0 0 1 30,30 v190 a30,30 0 0 1 -30,30 h-600 a30,30 0 0 1 -30,-30 v-190 a30,30 0 0 1 30,-30 z" />
           </defs>
           {/* Rainbow Fish */}
-          <use href="#rainbowFish" width="50" height="30">
+          <g opacity="0.7">
+            <ellipse cx="0" cy="0" rx="20" ry="12" fill="url(#rainbowGradient)" />
+            <polygon points="20,0 38,10 20,12" fill="#6a5acd" />
+            <circle cx="-10" cy="-4" r="2.5" fill="#fff" />
+            <circle cx="-10" cy="-4" r="1.2" fill="#222" />
             <animateMotion dur="22s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" begin="0s">
               <mpath href="#fishPath" />
             </animateMotion>
-          </use>
+          </g>
           {/* Neon Tetra */}
-          <use href="#neonTetra" width="35" height="18">
+          <g opacity="0.7">
+            <ellipse cx="0" cy="0" rx="16" ry="8" fill="#38f9d7" />
+            <rect x="-8" y="-2" width="16" height="4" fill="#ff5e62" />
+            <polygon points="16,0 26,6 16,8" fill="#1565c0" />
+            <circle cx="-7" cy="-2" r="1.5" fill="#fff" />
+            <circle cx="-7" cy="-2" r="0.8" fill="#222" />
             <animateMotion dur="18s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" begin="4s">
               <mpath href="#fishPath" />
             </animateMotion>
-          </use>
+          </g>
           {/* Goldfish */}
-          <use href="#goldfish" width="40" height="22">
+          <g opacity="0.7">
+            <ellipse cx="0" cy="0" rx="18" ry="10" fill="#ffb347" />
+            <polygon points="18,0 35,8 18,10" fill="#ff7f50" />
+            <circle cx="-8" cy="-3" r="2.5" fill="#fff" />
+            <circle cx="-8" cy="-3" r="1.2" fill="#222" />
             <animateMotion dur="25s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" begin="8s">
               <mpath href="#fishPath" />
             </animateMotion>
-          </use>
+          </g>
           {/* Guppy */}
-          <use href="#guppy" width="30" height="15">
+          <g opacity="0.7">
+            <ellipse cx="0" cy="0" rx="14" ry="7" fill="#43e97b" />
+            <polygon points="14,0 24,5 14,7" fill="#ff5e62" />
+            <circle cx="-6" cy="-2" r="1.8" fill="#fff" />
+            <circle cx="-6" cy="-2" r="0.9" fill="#222" />
             <animateMotion dur="20s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" begin="12s">
               <mpath href="#fishPath" />
             </animateMotion>
-          </use>
+          </g>
         </svg>
       </div>
       {/* Main Content - above fish animation, not mixed */}
