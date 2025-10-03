@@ -42,16 +42,12 @@ export default function Home() {
   return (
     <div className="page home" style={cardStyle}>
       <h1 style={headingStyle}>Loi Wai</h1>
-      <div style={sectionStyle}>
-        <p style={{ margin: 0 }}>
-          Mathematics & Computer Science professional passionate about IT, Finance, and Data Analytics. Dedicated to leveraging analytical skills and technical expertise to drive innovative solutions and support data-driven decision-making.
-        </p>
-      </div>
-      <div style={sectionStyle}>
-        <p style={{ margin: 0 }}>
-          Explore my background, skills, and experience across IT, analytics, and leadership. Welcome to my modern portfolio!
-        </p>
-      </div>
+      <p style={{ margin: '2rem 0' }}>
+        Mathematics & Computer Science professional passionate about IT, Finance, and Data Analytics. Dedicated to leveraging analytical skills and technical expertise to drive innovative solutions and support data-driven decision-making.
+      </p>
+      <p style={{ margin: '2rem 0' }}>
+        Explore my background, skills, and experience across IT, analytics, and leadership. Welcome to my modern portfolio!
+      </p>
       <NeumorphicToggle />
     </div>
   );

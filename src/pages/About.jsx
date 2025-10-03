@@ -31,27 +31,21 @@ export default function About() {
   return (
     <div className="page about" style={cardStyle}>
       <h1 style={headingStyle}>About Me</h1>
-      <div style={sectionStyle}>
-        <p style={{ margin: 0 }}>
-          <strong>Education:</strong><br />
-          Bachelor of Science in Mathematics & Computer Science<br />
-          University of Papua New Guinea, Graduated March 2022
-        </p>
-      </div>
-  <div style={sectionStyle}>
-        <p style={{ margin: 0 }}>
-          <strong>Skills:</strong><br />
-          <span style={{ color: '#1565c0', fontWeight: 600 }}>Programming:</span> Java, C++, C#, PHP, JavaScript, Python, VBA<br />
-          <span style={{ color: '#1565c0', fontWeight: 600 }}>Databases:</span> MySQL, PostgreSQL, ODBC, OLEDB<br />
-          <span style={{ color: '#1565c0', fontWeight: 600 }}>Frameworks & Tools:</span> Git, GitHub, Spring Boot, Vaadin, Laravel, Power BI, Tableau, Office 365, Advanced Excel<br />
-          IT Support & Networking, Data Analytics, Production Planning, Data Visualization
-        </p>
-      </div>
-  <div style={sectionStyle}>
-        <p style={{ margin: 0 }}>
-          I am detail-oriented and eager to contribute to innovative IT solutions and data-driven decision-making in dynamic environments.
-        </p>
-      </div>
+      <p style={{ margin: '2rem 0' }}>
+        <strong>Education:</strong><br />
+        Bachelor of Science in Mathematics & Computer Science<br />
+        University of Papua New Guinea, Graduated March 2022
+      </p>
+      <p style={{ margin: '2rem 0' }}>
+        <strong>Skills:</strong><br />
+        <span style={{ color: '#1565c0', fontWeight: 600 }}>Programming:</span> Java, C++, C#, PHP, JavaScript, Python, VBA<br />
+        <span style={{ color: '#1565c0', fontWeight: 600 }}>Databases:</span> MySQL, PostgreSQL, ODBC, OLEDB<br />
+        <span style={{ color: '#1565c0', fontWeight: 600 }}>Frameworks & Tools:</span> Git, GitHub, Spring Boot, Vaadin, Laravel, Power BI, Tableau, Office 365, Advanced Excel<br />
+        IT Support & Networking, Data Analytics, Production Planning, Data Visualization
+      </p>
+      <p style={{ margin: '2rem 0' }}>
+        I am detail-oriented and eager to contribute to innovative IT solutions and data-driven decision-making in dynamic environments.
+      </p>
       {/* Removed Download CV button */}
   <div style={{ marginTop: '2.5rem', textAlign: 'left', background: '#fff', borderRadius: 10, padding: '1.2rem' }}>
         <h2 style={subHeadingStyle}>My Work & Contributions</h2>
