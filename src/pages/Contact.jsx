@@ -29,7 +29,7 @@ export default function Contact() {
         <strong>Phone:</strong> 675 - 72272799
       </p>
       <p style={{ margin: '2rem 0' }}>
-        Or simply use the form below for collaborations, inquiries, or to discover more surprises!
+        Or simply use the form below for collaborations, inquiries, or to tell me about something!
       </p>
       <form
         action="https://formspree.io/f/mldpnjgn"
