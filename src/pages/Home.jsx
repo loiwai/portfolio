@@ -19,9 +19,10 @@ export default function Home() {
     maxWidth: 700,
     margin: '2rem auto',
     background: '#fff',
-    borderRadius: 16,
-    boxShadow: 'none',
+    borderRadius: 18,
+    boxShadow: '0 8px 32px #e0e3ec, -8px -8px 32px #ffffff',
     padding: '2.5rem 2rem',
+    position: 'relative',
   };
   const headingStyle = {
     color: '#1565c0',
@@ -31,9 +32,11 @@ export default function Home() {
   };
   const sectionStyle = {
     marginBottom: '2rem',
-    background: '#fff',
-    borderRadius: 10,
-    padding: '1.2rem',
+    background: 'none',
+    borderRadius: 0,
+    boxShadow: 'none',
+    padding: 0,
+    position: 'static',
   };
 
   return (

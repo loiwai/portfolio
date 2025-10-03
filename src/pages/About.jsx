@@ -60,11 +60,40 @@ export default function About() {
             <svg width="36" height="36" viewBox="0 0 24 24" fill="#1565c0" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.477 2 2 6.484 2 12.012c0 4.425 2.865 8.184 6.839 9.525.5.092.682-.217.682-.483 0-.237-.009-.868-.013-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.004.07 1.532 1.032 1.532 1.032.892 1.53 2.341 1.088 2.91.832.091-.647.35-1.088.636-1.339-2.221-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.254-.446-1.274.098-2.656 0 0 .84-.27 2.75 1.025A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.295 2.748-1.025 2.748-1.025.546 1.382.202 2.402.1 2.656.64.7 1.028 1.595 1.028 2.688 0 3.847-2.337 4.695-4.566 4.944.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.579.688.481C19.138 20.192 22 16.437 22 12.012 22 6.484 17.523 2 12 2z"/></svg>
           </a>
         </div>
-        <div style={{ marginTop: '2rem', textAlign: 'center' }}>
+        <div style={{
+          marginTop: '2.5rem',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          background: '#fff',
+          borderRadius: 16,
+          boxShadow: '0 4px 24px rgba(21,101,192,0.07)',
+          padding: '2rem 1rem',
+          maxWidth: 600,
+          marginLeft: 'auto',
+          marginRight: 'auto',
+        }}>
+          <h2 style={{
+            color: '#1565c0',
+            fontWeight: 700,
+            fontSize: '1.5rem',
+            marginBottom: '1.5rem',
+            textAlign: 'center',
+            letterSpacing: '0.01em',
+          }}>
+            GitHub Profile Highlights
+          </h2>
           <img
-            src={`https://ghchart.rshah.org/loiwai`}
-            alt="GitHub Contribution Graph"
-            style={{ maxWidth: '100%', borderRadius: 8, boxShadow: '0 2px 12px rgba(21,101,192,0.07)' }}
+            src="https://github-readme-stats.vercel.app/api?username=loiwai&show_icons=true&theme=default"
+            alt="Loi Wai GitHub Profile Card"
+            style={{
+              width: '100%',
+              maxWidth: 480,
+              borderRadius: 12,
+              boxShadow: '0 2px 12px rgba(21,101,192,0.10)',
+              background: '#fff',
+              marginBottom: '0.5rem',
+            }}
           />
         </div>
       </div>

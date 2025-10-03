@@ -5,9 +5,10 @@ export default function Contact() {
     maxWidth: 700,
     margin: '2rem auto',
     background: '#fff',
-    borderRadius: 16,
-    boxShadow: 'none',
+    borderRadius: 18,
+    boxShadow: '0 8px 32px #e0e3ec, -8px -8px 32px #ffffff',
     padding: '2.5rem 2rem',
+    position: 'relative',
   };
   const headingStyle = {
     color: '#1565c0',
@@ -17,9 +18,11 @@ export default function Contact() {
   };
   const sectionStyle = {
     marginBottom: '2rem',
-    background: '#fff',
-    borderRadius: 10,
-    padding: '1.2rem',
+    background: 'none',
+    borderRadius: 0,
+    boxShadow: 'none',
+    padding: 0,
+    position: 'static',
   };
   const buttonStyle = {
     minWidth: 220,
@@ -53,7 +56,18 @@ export default function Contact() {
           action="https://formspree.io/f/mldpnjgn"
           method="POST"
           className="contact-form"
-          style={{ maxWidth: 400, margin: '2rem auto', display: 'flex', flexDirection: 'column', gap: '1rem' }}
+          style={{
+            maxWidth: 400,
+            margin: '2rem auto',
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '1rem',
+            background: 'none',
+            borderRadius: 0,
+            boxShadow: 'none',
+            padding: 0,
+            position: 'static',
+          }}
         >
           <label htmlFor="name">Name</label>
           <input type="text" id="name" name="name" required placeholder="Your Name" />

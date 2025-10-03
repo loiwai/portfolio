@@ -6,6 +6,10 @@
   .card, .neumorphic-card {
     padding: 1.2em;
     max-width: 98vw;
+    box-shadow:
+      0 0 24px 2px #00eaff88,
+      0 8px 32px #e0e3ec,
+      -8px -8px 32px #ffffff;
   }
   .cv-download-link button,
   .contact-form button {
@@ -75,7 +79,10 @@
   padding: 2rem;
   background: #fff;
   border-radius: 18px;
-  box-shadow: none;
+  box-shadow:
+    0 0 24px 2px #00eaff88,
+    0 8px 32px #e0e3ec,
+    -8px -8px 32px #ffffff;
   padding: 2em;
   color: #222;
   font-family: 'Inter', 'Nunito Sans', Arial, sans-serif;
