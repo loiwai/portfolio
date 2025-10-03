@@ -56,7 +56,7 @@ export default function Home() {
           Mathematics & Computer Science professional passionate about IT, Finance, and Data Analytics. Dedicated to leveraging analytical skills and technical expertise to drive innovative solutions and support data-driven decision-making.
         </p>
         <p style={{ margin: '2rem 0' }}>
-          Explore my background, skills, and experience across IT, analytics, and leadership. Welcome to my modern portfolio!
+          Explore my background, skills, and experience across IT, analytics, and leadership. Thanks for visiting my portfolio!
         </p>
         <NeumorphicToggle />
       </div>
