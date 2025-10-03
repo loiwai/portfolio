@@ -1,3 +1,26 @@
+/* Fish Animation Container Styles */
+.page.home {
+  position: relative;
+  overflow: visible;
+}
+.page.home .fish-anim-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+.page.home .fish-anim-bg svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.page.home .main-content {
+  position: relative;
+  z-index: 1;
+}
 /* Responsive Design for Neumorphism Portfolio */
 @media (max-width: 900px) {
   #root {

@@ -1,22 +1,12 @@
 import React from 'react';
 
 export default function Contact() {
-  const cardStyle = {
-    maxWidth: 700,
-    margin: '2rem auto',
-    background: '#fff',
-    borderRadius: 18,
-    boxShadow: '0 8px 32px #e0e3ec, -8px -8px 32px #ffffff',
-    padding: '2.5rem 2rem',
-    position: 'relative',
-  };
   const headingStyle = {
     color: '#1565c0',
     fontWeight: 800,
     fontSize: '2.5rem',
     marginBottom: '1.5rem',
   };
-  // Removed sectionStyle, use plain <p> tags for inner content
   const buttonStyle = {
     minWidth: 220,
     background: '#e3f0ff',
@@ -27,12 +17,11 @@ export default function Contact() {
     padding: '0.8rem 1.2rem',
     fontSize: '1.08em',
     boxShadow: '0 2px 8px rgba(21,101,192,0.07)',
-    cursor: 'pointer',
     marginTop: '1rem',
   };
 
   return (
-    <div className="page contact" style={cardStyle}>
+    <div className="page contact">
       <h1 style={headingStyle}>Contact</h1>
       <p style={{ margin: '2rem 0' }}>
         Let's connect! You can reach me at:<br />
