@@ -1,0 +1,26 @@
+[33mfd538ba[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Fix Home page layout and add professional particle animation
+[33m9c00429[m Complete portfolio with futuristic particle background
+[33mb96ca09[m Fix navigation overlap and refine to futuristic background animation
+[33m0f24636[m Fix navigation overlap and refine and make it more top tier background animation
+[33mfdf852f[m Fix navigation overlap and refine background animation
+[33mec32468[m Fixed navigation overlap and updated professional background
+[33m2620731[m Replace fish animation with professional particle network background
+[33m8dd90f2[m Updated fish animation: smaller, darker, and more realistic
+[33ma59ffea[m update on form instruction
+[33md9cf283[m edit on details about Explore my background, skills, and experience across IT, analytics, and leadership. Thanks for visiting my portfolio! removing the word modern
+[33m54680c7[m Update to close for now
+[33m6c8f3ac[m Fix fish animation: inline SVG for compatibility
+[33mdb9c043[m Refine fish animation: realistic tank fish, strictly behind card
+[33m812a0d6[m Add fish swimming animation to homepage
+[33m1ade7fe[m Remove shadow and background from inner content for cleaner look
+[33ma6b1540[m Remove unnecessary layering from all pages for cleaner design
+[33m55acdd3[m Add neat neon lighting effect to card layers and resume-page
+[33mdabc5bf[m Make Home and Contact pages plain and professional, match About page
+[33mf1ab460[m Update README.md
+[33me009fe7[m Beautify and document portfolio, remove color shading, update README
+[33m1530cc1[m Fix navbar alignment and deploy latest changes
+[33mf60c1fa[m Update color palette and fonts for modern look
+[33m8168b80[m Apply Neumorphism Soft UI design to all components
+[33md9ddd12[m Standardize all pages, update CV link, unify design
+[33mdb03088[m Prepare for GitHub Pages deployment
+[33m46857c6[m Initial commit
