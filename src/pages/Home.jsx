@@ -21,42 +21,94 @@ export default function Home() {
     fontSize: '2.5rem',
     marginBottom: '1.5rem',
   };
-  // Removed sectionStyle, use plain <p> tags for inner content
+
+  // Generate multiple fish elements dynamically
+  const fishCount = 10;
+  const fishArray = Array.from({ length: fishCount }).map((_, i) => {
+    const delay = Math.random() * 10; // random start delay for realism
+    const size = 10 + Math.random() * 15; // smaller fish (10–25px)
+    const color = ['#1f3b4d', '#22313f', '#1a252f', '#2b3a42'][Math.floor(Math.random() * 4)]; // dark blue shades
+    const eyeColor = '#fff';
+    const pupilColor = '#000';
+
+    return (
+      <g key={i} opacity="0.9">
+        {/* Fish Body */}
+        <ellipse cx="0" cy="0" rx={size} ry={size * 0.6} fill={color} />
+        {/* Tail */}
+        <polygon
+          points={`${size},0 ${size * 1.8},${size * 0.4} ${size * 1.8},${-size * 0.4}`}
+          fill={color}
+        />
+        {/* Eye */}
+        <circle cx={-size * 0.5} cy={-size * 0.2} r={size * 0.15} fill={eyeColor} />
+        <circle cx={-size * 0.5} cy={-size * 0.2} r={size * 0.07} fill={pupilColor} />
+
+        {/* Swim motion */}
+        <animateMotion
+          dur={`${8 + Math.random() * 5}s`}
+          repeatCount="indefinite"
+          keyPoints="0;1"
+          keyTimes="0;1"
+          begin={`${delay}s`}
+        >
+          <mpath href="#fishPath" />
+        </animateMotion>
+      </g>
+    );
+  });
 
   return (
     <div className="page home" style={{ position: 'relative', overflow: 'visible' }}>
-      {/* Fish Animation SVG - strictly behind card, not inside content */}
-      <div className="fish-anim-bg" style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '400px', zIndex: 0, pointerEvents: 'none' }}>
-        <svg width="100vw" height="400" viewBox="0 0 900 400" style={{ position: 'absolute', left: 0, top: 0 }}>
+      {/* Fish Animation Background */}
+      <div
+        className="fish-anim-bg"
+        style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          width: '100vw',
+          height: '400px',
+          zIndex: 0,
+          pointerEvents: 'none',
+        }}
+      >
+        <svg
+          width="100vw"
+          height="400"
+          viewBox="0 0 900 400"
+          style={{ position: 'absolute', left: 0, top: 0 }}
+        >
           <defs>
-            <linearGradient id="rainbowGradient" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stopColor="#ff5e62" />
-              <stop offset="30%" stopColor="#ffb347" />
-              <stop offset="60%" stopColor="#43e97b" />
-              <stop offset="100%" stopColor="#38f9d7" />
-            </linearGradient>
-            <path id="fishPath" d="M100,100 h700 a40,40 0 0 1 40,40 v120 a40,40 0 0 1 -40,40 h-700 a40,40 0 0 1 -40,-40 v-120 a40,40 0 0 1 40,-40 z" />
+            <path
+              id="fishPath"
+              d="M100,100 h700 a40,40 0 0 1 40,40 v120 a40,40 0 0 1 -40,40 h-700 a40,40 0 0 1 -40,-40 v-120 a40,40 0 0 1 40,-40 z"
+            />
           </defs>
-          {/* TEST FISH - Large and visible */}
-          <g opacity="1">
-            <ellipse cx="0" cy="0" rx="40" ry="24" fill="red" />
-            <polygon points="40,0 80,20 40,24" fill="yellow" />
-            <circle cx="-20" cy="-8" r="5" fill="#fff" />
-            <circle cx="-20" cy="-8" r="2.5" fill="#222" />
-            <animateMotion dur="10s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" begin="0s">
-              <mpath href="#fishPath" />
-            </animateMotion>
-          </g>
+          {fishArray}
         </svg>
       </div>
-      {/* Main Content - above fish animation, not mixed */}
-      <div className="main-content" style={{ position: 'relative', zIndex: 1, background: 'rgba(255,255,255,0.98)', borderRadius: '24px', boxShadow: '0 4px 24px rgba(21,101,192,0.07)' }}>
+
+      {/* Main Content */}
+      <div
+        className="main-content"
+        style={{
+          position: 'relative',
+          zIndex: 1,
+          background: 'rgba(255,255,255,0.98)',
+          borderRadius: '24px',
+          boxShadow: '0 4px 24px rgba(21,101,192,0.07)',
+        }}
+      >
         <h1 style={headingStyle}>Loi Wai</h1>
         <p style={{ margin: '2rem 0' }}>
-          Mathematics & Computer Science professional passionate about IT, Finance, and Data Analytics. Dedicated to leveraging analytical skills and technical expertise to drive innovative solutions and support data-driven decision-making.
+          Mathematics & Computer Science professional passionate about IT, Finance, and Data
+          Analytics. Dedicated to leveraging analytical skills and technical expertise to drive
+          innovative solutions and support data-driven decision-making.
         </p>
         <p style={{ margin: '2rem 0' }}>
-          Explore my background, skills, and experience across IT, analytics, and leadership. Thanks for visiting my portfolio!
+          Explore my background, skills, and experience across IT, analytics, and leadership. Thanks
+          for visiting my portfolio!
         </p>
         <NeumorphicToggle />
       </div>
