@@ -31,7 +31,7 @@ export default function About() {
         IT Support & Networking, Data Analytics, Production Planning, Data Visualization
       </p>
       <p style={{ margin: '2rem 0' }}>
-        I am detail-oriented and eager to contribute to innovative IT solutions and data-driven decision-making in dynamic environments.
+        I enjoy collaborating with teams, solving complex challenges, and continuously developing my technical knowledge and professional skills.
       </p>
       {/* Removed Download CV button */}
       <h2 style={subHeadingStyle}>My Work & Contributions</h2>
