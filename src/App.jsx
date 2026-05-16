@@ -55,7 +55,7 @@ export default function App() {
         </main>
 
         <footer className="footer">
-          <p>Modern IT portfolio for systems, automation and analytics — built with React + Vite.</p>
+          <p>Property of Loi Wai. This website was built with React + Vite. Thank you for visiting👌</p>
         </footer>
       </div>
     </Router>
